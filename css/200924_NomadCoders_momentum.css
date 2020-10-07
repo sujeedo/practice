@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+/* * {
+  border: 1px solid rgb(106, 212, 253);
+} */
+html {
+  font-size: 250%;
+}
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  background:black;
+  color: white;
+}
+ul {
+  padding: 0;
+}
+li span {
+  font-size: 0.8rem;
+}
+.form,
+.greetings {
+  display: none;
+}
+.showing {
+  display: block;
+}
+/* 배경 이미지 */
+@keyframes fadeIn {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bgImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  min-height: 110%;
+  z-index: -1;
+  animation: fadeIn .5s linear;
+}
+/* 실시간 시계 */
+.clock {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+}
+/* 폼 공통 */
+form {
+  position: relative;
+  width: 12.5rem;
+  height: 3rem;
+  text-align: center;
+}
+form input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 0;
+  border-bottom: 3px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+form label {
+  font-size: 0.8rem;
+}
+p {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.4rem;
+  text-align: center;
+}
+/* 이름 입력후 인삿말 */
+.form {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.todo {
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo_list {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  list-style: none;
+  cursor: default;
+  animation: show2 0.5s ease-in-out;
+  transition: 0.5s;
+}
+@keyframes show2 {
+  0% {
+    opacity: 0;
+    top: 71%;
+  }
+  100% {
+    opacity: 1;
+    top: 67%;
+  }
+}
+.todo_list li {
+  width: 100%;
+}
+.todo_list button {
+  position: absolute;
+  top: 0.4rem;
+  right: -1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  font-weight: 100;
+  font-size: 0.6rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+}
+.todo_list button:hover{
+  background-color: rgba(139, 139, 139, 0.219);
+}
+.todo_list:hover button{
+  opacity: 1;
+}
+.form label {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.greetings {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  animation: show1 0.5s ease-in-out;
+}
+@keyframes show1 {
+  0% {
+    opacity: 0;
+    top: 55%;
+  }
+  100% {
+    opacity: 1;
+    top: 51%;
+  }
+}
+.todo input {
+  margin-top: 0.2rem;
+  font-size: 0.6rem;
+}
+.weather {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.4rem;
+  border-radius: 0.2rem;
+  background: rgba(83, 83, 83, 0.37);
+}
+.none {
+  display: none;
+}
+@media All and (max-width : 600px) {
+
+}
